@@ -1,0 +1,21 @@
+div#oreo  {
+    position: relative;
+    text-align: center;
+}
+
+div#oreo img {
+    position: absolute;
+    padding-left: 45%;
+}
+
+body {
+    text-align: center;
+    position: relative;
+    background-color: floralwhite;
+}
+
+#meme {
+    width: 50%;
+    position: relative;
+    margin-bottom: 40px;
+}
