@@ -1,5 +1,6 @@
 function addLayer() {
 var imageId, leftPos, topPos = 0;
+
 var oreo = document.getElementById('oreo');
 
 while (oreo.firstChild) {
@@ -7,6 +8,7 @@ while (oreo.firstChild) {
 }
 
 const strings = document.getElementById('inputString').value.toUpperCase().match(/o|re|&/gi);
+
 
 for(var i = 0; i < strings.length; i++) {
     const image = document.createElement('img');
@@ -46,10 +48,11 @@ for(var i = 0; i < strings.length; i++) {
             topPos += 30;
         }
     }
-    image.setAttribute('src', `${imageId}.png`);
+    image.setAttribute('src', `./Images/${imageId}.png`);
     image.style['z-index'] = strings.length - i;
     image.style.left = `${leftPos}px`;
     image.style.top = `${topPos}px`;
+    image.classList.add('oreoLayer');
     oreo.appendChild(image);
 }
 }
