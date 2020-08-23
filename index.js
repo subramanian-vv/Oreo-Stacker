@@ -1,14 +1,15 @@
+var oreo = document.getElementById('oreo');
+var input = document.getElementById('inputString');
+
 function addLayer() {
 var imageId, leftPos, topPos = 0;
-
-var oreo = document.getElementById('oreo');
 
 while (oreo.firstChild) {
     oreo.removeChild(oreo.firstChild);
 }
 
-const strings = document.getElementById('inputString').value.toUpperCase().match(/o|re|&/gi);
-
+input.value = input.value.replace(/[^ore&]/gi, '');
+const strings = input.value.toUpperCase().match(/o|re|&/gi);
 
 for(var i = 0; i < strings.length; i++) {
     const image = document.createElement('img');
@@ -57,4 +58,4 @@ for(var i = 0; i < strings.length; i++) {
 }
 }
 
-document.getElementById('inputString').addEventListener("keyup", addLayer);
+input.addEventListener("keyup", addLayer);
