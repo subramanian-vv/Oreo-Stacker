@@ -11,8 +11,12 @@ div#oreo img {
 body {
     text-align: center;
     position: relative;
-    background-color: floralwhite;
+    background-color: #f8f8f6;
     margin-bottom: 10%;
+}
+
+h1 {
+    font-size: 3em;
 }
 
 #meme {
@@ -26,6 +30,11 @@ input {
 }
 
 @media only screen and (max-width: 768px) {
+    /* h1 {
+        font-size: 3rem;
+        
+    } */
+    
     #meme {
         width: 100%;
         position: relative;
